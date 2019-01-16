@@ -10,7 +10,7 @@ product['title'] = nokogiri.at_css('#productTitle').text.strip
 product['seller'] = nokogiri.at_css('a#bylineInfo').text.strip
 
 #extract number of reviews
-reviews_count = nokogiri.at_css('span#acrCustomerReviewText').text.strip.split(' ').first
+reviews_count = nokogiri.at_css('span#acrCustomerReviewText').text.strip.split(' ').first.gsub(',','')
 product['reviews_count'] = reviews_count =~ /^[0-9]*$/ ? reviews_count.to_i : nil
 
 #extract rating

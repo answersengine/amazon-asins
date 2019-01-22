@@ -3,6 +3,12 @@ nokogiri = Nokogiri.HTML(content)
 # initialize an empty hash
 product = {}
 
+#save the url
+product['url'] = page['vars']['url']
+
+#save the asin
+product['asin'] = page['vars']['asin']
+
 #extract title
 product['title'] = nokogiri.at_css('#productTitle').text.strip
 

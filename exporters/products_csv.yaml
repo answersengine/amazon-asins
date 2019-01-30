@@ -1,0 +1,27 @@
+exporter_name: products_csv
+exporter_type: csv
+collection: products
+no_headers: false
+offset: 0
+order: desc
+fields:
+ - header: "gid"
+   path: "_gid"
+ - header: "created at"
+   path: "_created_at"
+ - header: "title"
+   path: "title"
+ - header: "description"
+   path: "description"
+ - header: "image"
+   path: "image"
+ - header: "available"
+   path: "available"
+ - header: "price"
+   path: "price"
+ - header: "rating"
+   path: "rating"
+ - header: "reviews count"
+   path: "reviews_count"
+ - header: "seller"
+   path: "seller"

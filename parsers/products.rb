@@ -14,7 +14,6 @@ else
   product['author'] = nokogiri.css('a.contributorNameID').text.strip
 end
 
-
 #extract number of reviews
 reviews_node = nokogiri.at_css('span#acrCustomerReviewText')
 reviews_count = reviews_node ? reviews_node.text.strip.split(' ').first.gsub(',','') : nil
